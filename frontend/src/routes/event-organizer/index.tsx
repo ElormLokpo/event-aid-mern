@@ -1,5 +1,6 @@
 import { DashboardLayout } from "@/layouts/dashboard";
-import { TopNav } from "@/pages/dashboard/event-organizer/components/top-nav";
+import { TopNav } from "@/pages/dashboard/components/top-nav";
+import { EventOrganizerDashboardRoot } from "@/pages/dashboard/event-organizer";
 import { EventOrganizerHomepage } from "@/pages/dashboard/event-organizer/home";
 import { RouteObject } from "react-router-dom";
 
@@ -10,7 +11,13 @@ export const eventOrganizerRoutes:RouteObject[] = [
         children: [
             {
                 path: "",
-                element:<EventOrganizerHomepage />
+                element:<EventOrganizerDashboardRoot />,
+                children:[
+                    {
+                        path:"",
+                        element: <EventOrganizerHomepage />
+                    }
+                ]
             }
         ]
     }

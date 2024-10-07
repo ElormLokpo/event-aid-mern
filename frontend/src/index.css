@@ -24,3 +24,15 @@ html, body{
     background-color: rgb(73, 71, 71);
     border-radius: 5rem;
 }
+
+.background-blur{
+    background-image: url("./assets/gen.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 2rem;
+}
+
+.wrapper-blur{
+    background-color: rgba(30, 30, 30, 0.87);
+    backdrop-filter: blur(10px);
+}
