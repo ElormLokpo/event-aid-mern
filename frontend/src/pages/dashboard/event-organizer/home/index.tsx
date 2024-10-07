@@ -1,21 +1,31 @@
-import { TitleSummary } from "../components/tile-summary"
+import { DatePicker } from "../../components/calendar"
+import { ChartSection } from "../../components/chart"
+import { CardSection, UserCard } from "../components/cards"
 
 
-export const EventOrganizerHomepage = ()=>{
-    let def_style = "w-full bg-stone-700 mb-2 rounded py-2"
+export const EventOrganizerHomepage = () => {
 
-    return(
+
+    return (
         <div>
-            <div>
-                <TitleSummary />
-            </div>
-          
+        
             <div className="w-full grid grid-cols-12 gap-2 h-[40rem]">
-                <div className={`col-span-8 ${def_style}`}>
-                    c
+                <div className={`col-span-8 `}>
+                    <div className="mb-6">
+                        <CardSection />
+                    </div>
+                    <div className="">
+                        <ChartSection />
+                    </div>
                 </div>
-                <div className={`col-span-4 ${def_style}`}>
-                    d
+                <div className={`col-span-4`}>
+                    <div>
+                        <DatePicker />
+                    </div>
+                    <div className="mb-2">
+                        <UserCard />
+                    </div>
+
                 </div>
             </div>
         </div>

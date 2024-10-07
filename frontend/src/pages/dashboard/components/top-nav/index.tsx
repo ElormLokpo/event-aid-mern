@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom"
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { MdOutlineEmail } from "react-icons/md";
+import { ProfileImage } from "@/constants";
 
 export const TopNav = () => {
     return (
@@ -48,7 +49,6 @@ const Navs = () => {
 
 const UserComponent = () => {
     let container_style = "bg-stone-700 rounded-full font-semibold w-10 h-10 flex items-center justify-center text-xs"
-    let profile_pic = "https://picsum.photos/200/300"
     let profile_style = "rounded-full font-semibold w-9 h-9 border border-emerald-500 flex items-center justify-center text-xs"
     return (
         <div className="flex gap-1">
@@ -60,9 +60,7 @@ const UserComponent = () => {
             </div>
 
             <div className="flex gap-1 items-center justify-center">
-               
-                <div className={profile_style} style={{ backgroundImage: `url(${profile_pic})` }}>
-
+                <div className={profile_style} style={{ backgroundImage: `url(${ProfileImage})` }}>
                 </div>
             </div>
 
